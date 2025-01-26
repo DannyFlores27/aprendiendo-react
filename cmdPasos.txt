@@ -1,0 +1,11 @@
+cmd
+mover hasta ubicación
+cd .. retroceder
+crear carpeta
+mkdir micarpeta
+git init
+si es monorepo
+aquí estarán los proyectos
+mkdir aprendiendo-react
+git add origin urlgithubRepo
+npm init -y
