@@ -2,17 +2,23 @@ import './App.css'
 
 export function App() {
   return (
-    <article>
-        <header>
-            <img alt="El avatar de Mario" src="https://unavatar.io/youtube/freecodecamp"></img>
-            <div>
+    <article className='tw-followCard'>
+        <header className='tw-followCard-header'>
+            <img
+                className='tw-followCard-avatar'
+                alt="El avatar de Mario"
+                src="https://unavatar.io/youtube/freecodecamp"></img>
+            <div className="tw-followCard-info">
                 <strong>Free Code Camp</strong>
-                <span>@freecodecamp</span>
+                <span
+                className='tw-followCard-infoUserName'>@freecodecamp</span>
             </div>
         </header>
-        
+
         <aside>
-            <button>Seguir</button>
+            <button className='tw-followCard-button'>
+                Seguir
+            </button>
         </aside>
     </article>
   )
