@@ -1,6 +1,8 @@
+import './App.css'
+
 export function App() {
   return (
-    <article style={{display: 'flex', alignItems: 'center', color: '#fff'}}>
+    <article>
         <header>
             <img alt="El avatar de Mario" src="https://unavatar.io/youtube/freecodecamp"></img>
             <div>
@@ -8,6 +10,7 @@ export function App() {
                 <span>@freecodecamp</span>
             </div>
         </header>
+        
         <aside>
             <button>Seguir</button>
         </aside>
