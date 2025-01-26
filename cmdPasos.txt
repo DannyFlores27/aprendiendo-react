@@ -31,3 +31,5 @@ npm install (dependencias)
 npm run dev
 
 code . (abrir vs code)
+
+dir (listar)
