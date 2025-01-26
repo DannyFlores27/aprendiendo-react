@@ -8,4 +8,26 @@ si es monorepo
 aquí estarán los proyectos
 mkdir aprendiendo-react
 git add origin urlgithubRepo
+git status
+crear un archivo.txt para que hayan cambios
+git add .
+git commit -m "Mensaje"
+git push -u origin master
+
 npm init -y
+agregar repositorio, bugs y homepage
+
+mkdir projects
+cd projects
+npm create vite@latest
+instalar vite
+Project name
+framework react
+variante JS + SWC (transpilador)
+
+cd proyecto
+npm install (dependencias)
+
+npm run dev
+
+code . (abrir vs code)
