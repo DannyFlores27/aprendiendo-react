@@ -3,6 +3,7 @@
     align-items: center;
     color: #fff;
     font-size: .8rem;
+    justify-content: space-between;
 }
 
 .tw-followCard-header {
@@ -27,7 +28,7 @@
 }
 
 .tw-followCard-button {
-    margin-left: 15px;
+    margin-left: 16px;
     border: 0;
     border-radius: 999px;
     padding: 6px 16px;
