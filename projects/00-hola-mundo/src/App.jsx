@@ -2,9 +2,10 @@ import './App.css'
 import { TwitterFollowCard } from './TwitterFollowCard'
 
 export function App () {
+  const freecodecamp = { isFollowing: false }
   return (
     <section className="App">
-        <TwitterFollowCard isFollowing={false} userName="freecodecamp">
+        <TwitterFollowCard { ... freecodecamp }>
           FreeCodeCamp
         </TwitterFollowCard>
         
