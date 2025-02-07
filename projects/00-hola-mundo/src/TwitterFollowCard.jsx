@@ -1,7 +1,5 @@
-export function TwitterFollowCard ({ userName, name, isFollowing }) {
+export function TwitterFollowCard ({ children, userName, isFollowing }) {
     console.log(isFollowing)
-
-    const title = userName === 'freecodecamp' ? 'Free Code Camp' : userName === 'realmadrid' ? 'Real Madrid' : 'FC Barcelona'
 
     return (
       <article className='tw-followCard'>
@@ -11,9 +9,9 @@ export function TwitterFollowCard ({ userName, name, isFollowing }) {
                   alt="El avatar de Mario"
                   src={`https://unavatar.io/youtube/${userName}`}></img>
               <div className="tw-followCard-info">
-                  <strong>{name}</strong>
+                  <strong>{children}</strong>
                   <span
-                  className='tw-followCard-infoUserName'>@{title}</span>
+                  className='tw-followCard-infoUserName'>@{userName}</span>
               </div>
           </header>
   

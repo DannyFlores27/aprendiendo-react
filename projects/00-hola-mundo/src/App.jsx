@@ -4,9 +4,17 @@ import { TwitterFollowCard } from './TwitterFollowCard'
 export function App () {
   return (
     <section className="App">
-        <TwitterFollowCard isFollowing={false} userName="freecodecamp" name="Free Code Camp"/>
-        <TwitterFollowCard isFollowing userName="realmadrid" name="Real Madrid"/>
-        <TwitterFollowCard  userName="fcbarcelona" name="FC Barcelona"/>
+        <TwitterFollowCard isFollowing={false} userName="freecodecamp">
+          FreeCodeCamp
+        </TwitterFollowCard>
+        
+        <TwitterFollowCard children="Real Madrid" isFollowing userName="realmadrid">
+          
+        </TwitterFollowCard>
+        
+        <TwitterFollowCard  userName="fcbarcelona">
+          FC Barcelona <strong>🔵🔴</strong>
+        </TwitterFollowCard>
     </section>
   )
 }
