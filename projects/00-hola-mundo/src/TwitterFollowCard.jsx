@@ -1,5 +1,7 @@
-export function TwitterFollowCard ({ formattedUserName, userName, name, isFollowing }) {
+export function TwitterFollowCard ({ userName, name, isFollowing }) {
     console.log(isFollowing)
+
+    const title = userName === 'freecodecamp' ? 'Free Code Camp' : userName === 'realmadrid' ? 'Real Madrid' : 'FC Barcelona'
 
     return (
       <article className='tw-followCard'>
@@ -11,9 +13,7 @@ export function TwitterFollowCard ({ formattedUserName, userName, name, isFollow
               <div className="tw-followCard-info">
                   <strong>{name}</strong>
                   <span
-                  className='tw-followCard-infoUserName'>
-                    {formattedUserName}
-                    </span>
+                  className='tw-followCard-infoUserName'>@{title}</span>
               </div>
           </header>
   
