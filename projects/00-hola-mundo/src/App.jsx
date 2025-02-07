@@ -9,7 +9,7 @@ export function App () {
         </TwitterFollowCard>
         
         <TwitterFollowCard children="Real Madrid" isFollowing userName="realmadrid">
-          
+          No usar así
         </TwitterFollowCard>
         
         <TwitterFollowCard  userName="fcbarcelona">
