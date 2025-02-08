@@ -33,6 +33,8 @@ Declarativo: declarar lo que quiero
 
 Todo en función del ESTADO.
 
+ESTADO SIRVE PARA REENDERIZAR.
+
 React es reactivo por eso su nombre, cada vez que hay un cambio reacciona.
 
 Los cambios se propagan a nivel estado interno del componente, y también como un arbol, desde una rama padre que esta cerca de la raíz hacia todo sus hijos. React solo actualiza los cambios y lo demás lo deja igual, pero si reenderiza todo en el Dom virtual luego compara con el Dom actual.
@@ -43,6 +45,8 @@ React trabaj con un DOM virtual, el cual renderiza solo los cambios ya que compa
 ![image](https://github.com/user-attachments/assets/d628f9d3-7dac-43a5-9c6b-61698feba05f)
 ![image](https://github.com/user-attachments/assets/88613695-d586-40e8-b338-8f32f0402289)
 ![image](https://github.com/user-attachments/assets/6794743d-24fa-49de-b3d7-a47ad6f2f4b4)
+
+HOOKS FUNCIONES DE DIFRENTE TIPO, NO SOLO STATE.
 
 Hooks son funciones que dotan de más vida los componentes. 
 Permite usar estado y otras caracteríasticas en el renderizado.
