@@ -44,4 +44,6 @@ React trabaj con un DOM virtual, el cual renderiza solo los cambios ya que compa
 ![image](https://github.com/user-attachments/assets/88613695-d586-40e8-b338-8f32f0402289)
 ![image](https://github.com/user-attachments/assets/6794743d-24fa-49de-b3d7-a47ad6f2f4b4)
 
-
+Hooks son funciones que dotan de más vida los componentes. 
+Permite usar estado y otras caracteríasticas en el renderizado.
+Se asigna un estado incial, useState devuelve un array de 2 posiciones: 1 valor del estado y 2 función para actualizar el estado.
