@@ -12,3 +12,24 @@ React al ser declarativo le dices que quieres obtener o que haga, pero sin darle
 DECLARAMOS LO QUE ESPERAMOS QUE HAGA. SOLO onClick
 
 ![image](https://github.com/user-attachments/assets/f205f77b-df73-4699-9869-8d59ec0c9216)
+
+Imperativo: dar las instrucciones paso a paso
+  Quiero pan
+    Levantate
+    Toma dinero
+    Abre la puerta
+    Camina a la panaderia
+    Pide el pan
+    Paga el pan
+    Camina de regreso
+    Tengo el pan
+
+Declarativo: declarar lo que quiero
+  Quiero pan
+    Si tengo dinero y hay pan
+      Lo obtengo
+    Sino
+      No lo obtengo
+
+Todo en función del ESTADO.
+      
