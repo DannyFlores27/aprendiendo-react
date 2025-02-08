@@ -35,6 +35,11 @@ Todo en función del ESTADO.
 
 ESTADO SIRVE PARA REENDERIZAR.
 
+Valores del estado: se asigna un estado inicial, useState devuelve un array de 2 posiciones: 1 valor del estado y 2 función para actualizar el estado.
+  const state = useState(false)
+  const isFollowing = state[0]
+  const setIsFollowing = state[1]
+
 React es reactivo por eso su nombre, cada vez que hay un cambio reacciona.
 
 Los cambios se propagan a nivel estado interno del componente, y también como un arbol, desde una rama padre que esta cerca de la raíz hacia todo sus hijos. React solo actualiza los cambios y lo demás lo deja igual, pero si reenderiza todo en el Dom virtual luego compara con el Dom actual.
