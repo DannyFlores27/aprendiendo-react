@@ -51,3 +51,5 @@ HOOKS FUNCIONES DE DIFRENTE TIPO, NO SOLO STATE.
 Hooks son funciones que dotan de más vida los componentes. 
 Permite usar estado y otras caracteríasticas en el renderizado.
 Se asigna un estado incial, useState devuelve un array de 2 posiciones: 1 valor del estado y 2 función para actualizar el estado.
+
+Del padre al hijo podemos pasar funciones, mientras que del hijo al padre no. Pero si lo podemos llegar hacer con CALLBACK.
