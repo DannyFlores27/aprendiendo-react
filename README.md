@@ -32,4 +32,16 @@ Declarativo: declarar lo que quiero
       No lo obtengo
 
 Todo en función del ESTADO.
-      
+
+React es reactivo por eso su nombre, cada vez que hay un cambio reacciona.
+
+Los cambios se propagan a nivel estado interno del componente, y también como un arbol, desde una rama padre que esta cerca de la raíz hacia todo sus hijos. React solo actualiza los cambios y lo demás lo deja igual, pero si reenderiza todo en el Dom virtual luego compara con el Dom actual.
+![image](https://github.com/user-attachments/assets/762161b2-0a7e-4e8f-8736-62e49fc7d73e)
+
+React trabaj con un DOM virtual, el cual renderiza solo los cambios ya que compara el Dom actual con el nuevo y dice: solo son estos cambios no vale la pena reenderizar todo solo voy a reederizar lo nuevo.
+
+![image](https://github.com/user-attachments/assets/d628f9d3-7dac-43a5-9c6b-61698feba05f)
+![image](https://github.com/user-attachments/assets/88613695-d586-40e8-b338-8f32f0402289)
+![image](https://github.com/user-attachments/assets/6794743d-24fa-49de-b3d7-a47ad6f2f4b4)
+
+
