@@ -7,3 +7,8 @@ Fundamentos y primeros pasos con React.
 ![image](https://github.com/user-attachments/assets/2cd4b645-d2f1-48a2-a43f-5cd06be019fa)
 ![image](https://github.com/user-attachments/assets/1f05e6d4-1896-4762-bae4-b32a42d13898)
 
+React al ser declarativo le dices que quieres obtener o que haga, pero sin darle el paso a paso o el como hacerlo.  Ejemplo: onClick={handleClick} en lugar de AddEventListener...
+
+DECLARAMOS LO QUE ESPERAMOS QUE HAGA. SOLO onClick
+
+![image](https://github.com/user-attachments/assets/f205f77b-df73-4699-9869-8d59ec0c9216)
