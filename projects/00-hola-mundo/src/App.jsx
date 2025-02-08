@@ -2,18 +2,17 @@ import './App.css'
 import { TwitterFollowCard } from './TwitterFollowCard'
 
 export function App () {
-  const freecodecamp = { isFollowing: false }
   return (
     <section className="App">
-        <TwitterFollowCard { ... freecodecamp }>
+        <TwitterFollowCard userName="freeCodeCamp">
           FreeCodeCamp
         </TwitterFollowCard>
         
-        <TwitterFollowCard children="Real Madrid" isFollowing userName="realmadrid">
-          No usar así
+        <TwitterFollowCard userName="realmadrid">
+          Real Madrid C.F.
         </TwitterFollowCard>
         
-        <TwitterFollowCard  userName="fcbarcelona">
+        <TwitterFollowCard userName="fcbarcelona">
           FC Barcelona <strong>🔵🔴</strong>
         </TwitterFollowCard>
     </section>
