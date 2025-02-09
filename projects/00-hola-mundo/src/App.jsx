@@ -4,7 +4,7 @@ import { TwitterFollowCard } from './TwitterFollowCard'
 export function App () {
   return (
     <section className="App">
-        <TwitterFollowCard userName="freeCodeCamp">
+        <TwitterFollowCard userName="freeCodeCamp" initialIsFollowing={true}>
           FreeCodeCamp
         </TwitterFollowCard>
         
