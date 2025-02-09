@@ -62,3 +62,13 @@ Del padre al hijo podemos pasar funciones, mientras que del hijo al padre no. Pe
 Estado Inicial solo se inicializa una vez, por lo cual si el estado de un componente padre que es enviado como Prop para inicializar el estado de un componente hijo, no influye más de 1 vez en el hijo porque el estado inicial solo ocurre una vez, cuando inicia el app y no cuando se vuelve a re enderizar.
 
 No esperar que un componente hijo se vuelva a reenderizar por el cambio del estado de un componente padre, cuando el estado del padre es enviado como prop estadoInicial al hijo, esto solo ocurre 1 vez cuando inicia el app.
+
+Renderizar una lista de elementos. 
+
+Key es importante para decirle a react en el dom virtual cual sera un identificador unico para cada elemento.
+
+No puede ser un index, a menos que sepamos que siempre será el mismo y es único. De lo contrario usar id de db, uuid (creado desde la lista de elementos) o cualquier otro elemento o fusión de elementos para hacer uno único.
+
+Porque de no tener un key único, habrán problemas de reenderizado, información duplicada, en estado incorrecto, etc.
+
+React por defecto usa el index como key, pero es problema por lo anterior y mala práctica.
