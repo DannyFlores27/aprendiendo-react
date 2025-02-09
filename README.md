@@ -67,7 +67,7 @@ Renderizar una lista de elementos.
 
 Key es importante para decirle a react en el dom virtual cual sera un identificador unico para cada elemento.
 
-No puede ser un index, a menos que sepamos que siempre será el mismo y es único. De lo contrario usar id de db, uuid (creado desde la lista de elementos) o cualquier otro elemento o fusión de elementos para hacer uno único.
+No puede ser un index, a menos que sepamos que siempre será el mismo y es único. De lo contrario usar id de db, uuid (creado desde la lista de elementos) o cualquier otro elemento o fusión de elementos para hacer uno único. No algo aleatorio.
 
 Porque de no tener un key único, habrán problemas de reenderizado, información duplicada, en estado incorrecto, etc.
 
