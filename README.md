@@ -72,3 +72,24 @@ No puede ser un index, a menos que sepamos que siempre será el mismo y es únic
 Porque de no tener un key único, habrán problemas de reenderizado, información duplicada, en estado incorrecto, etc.
 
 React por defecto usa el index como key, pero es problema por lo anterior y mala práctica.
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+NO mutar las Prop´s ni los Estados. Tratar como si fuesen inmutables.
+
+Ejemplo: 
+const newBoard = [...board]
+    newBoard[index] = turn
+    setBoard(newBoard)
+
+Spread y Rest Operator copia superficial
+[...board]
+
+Copia profunda
+structuredClone[board]
+
+Crear una nueva variable en lugar de modificar el valor de la variable de la Prop o el Estado.
+
+ESTO ES PORQUE EN REACT CAMBIAR EL ESTADO DIRECTAMENTE CAUSA PROBLEMAS DE RE ENDERIZADO, SE DEBE CAMBIAR CON setEstado (setBoard)
+
+Los datos del nuevo re enderizado deben ser nuevos. Si se ha modificado un elemento nuevo, objeto, array, etc. Sino ha cambiado puede ser el mismo.
+---------------------------------------------------------------------------------------------------------------------------------------------
