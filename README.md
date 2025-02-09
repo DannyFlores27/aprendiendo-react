@@ -60,3 +60,5 @@ Se asigna un estado incial, useState devuelve un array de 2 posiciones: 1 valor 
 Del padre al hijo podemos pasar funciones, mientras que del hijo al padre no. Pero si lo podemos llegar hacer con CALLBACK.
 
 Estado Inicial solo se inicializa una vez, por lo cual si el estado de un componente padre que es enviado como Prop para inicializar el estado de un componente hijo, no influye más de 1 vez en el hijo porque el estado inicial solo ocurre una vez, cuando inicia el app y no cuando se vuelve a re enderizar.
+
+No esperar que un componente hijo se vuelva a reenderizar por el cambio del estado de un componente padre, cuando el estado del padre es enviado como prop estadoInicial al hijo, esto solo ocurre 1 vez cuando inicia el app.
