@@ -58,3 +58,5 @@ Permite usar estado y otras caracteríasticas en el renderizado.
 Se asigna un estado incial, useState devuelve un array de 2 posiciones: 1 valor del estado y 2 función para actualizar el estado.
 
 Del padre al hijo podemos pasar funciones, mientras que del hijo al padre no. Pero si lo podemos llegar hacer con CALLBACK.
+
+Estado Inicial solo se inicializa una vez, por lo cual si el estado de un componente padre que es enviado como Prop para inicializar el estado de un componente hijo, no influye más de 1 vez en el hijo porque el estado inicial solo ocurre una vez, cuando inicia el app y no cuando se vuelve a re enderizar.
