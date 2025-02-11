@@ -27,13 +27,60 @@ function App() {
 
   const [turn, setTurn] = useState(TURNS.X)
 
+  // Null es que no hay ganador, false es que hay empate
+  const [winner, setWinner] = useState(null)
+
+  const WINNER_COMBOS = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6]
+  ]
+
+  const checkWinner = (boardToCheck) => {
+    for (const combo of WINNER_COMBOS) {
+      const [a, b, c] = combo
+      // Si hay un ganador
+      if (
+        boardToCheck[a] &&
+        boardToCheck[a] === boardToCheck[b] &&
+        boardToCheck[a] === boardToCheck[c]
+      ) {
+        return boardToCheck[a]
+      }
+    }
+    // Si no hay ganador
+    return null
+  }
+
   const updateBoard = (index) => {
+    // No actualizamos esta posición si ya está ocupada
+    // o si ya hay un ganador
+    if (board[index] || winner) {
+      return
+    }
+    // Actualizar el tablero
     const newBoard = [...board]
     newBoard[index] = turn
-    setBoard(newBoard)
-
+    setBoard(newBoard) // Asincrono, no garantiza que ya esté actualizado
+    // Cambiar de turno
     const newTurn = turn === TURNS.X ? TURNS.O : TURNS.X
     setTurn(newTurn)
+    // Verificar si hay un ganador
+    const newWinner = checkWinner(newBoard)
+    if (newWinner) {
+      setWinner(newWinner) // ???????????????????????????
+
+      // Porque no se muestra el alert después de que hay un ganador
+
+      // ???????????????????????????????????????????????????????
+
+      alert(`Winner: ${newWinner}`)
+    }
   }
 
   return (
