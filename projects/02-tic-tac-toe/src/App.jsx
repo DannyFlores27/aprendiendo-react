@@ -57,6 +57,12 @@ function App() {
     return null
   }
 
+  const resetGame = () => {
+    setBoard(Array(9).fill(null))
+    setTurn(TURNS.X)
+    setWinner(null)
+  }
+
   const updateBoard = (index) => {
     // No actualizamos esta posición si ya está ocupada
     // o si ya hay un ganador
@@ -73,19 +79,14 @@ function App() {
     // Verificar si hay un ganador
     const newWinner = checkWinner(newBoard)
     if (newWinner) {
-      setWinner(newWinner) // ???????????????????????????
-
-      // Porque no se muestra el alert después de que hay un ganador
-
-      // ???????????????????????????????????????????????????????
-
-      alert(`Winner: ${newWinner}`)
-    }
+      setWinner(newWinner)
+    } // TODO: check if game is over
   }
 
   return (
     <main className="board">
       <h1>Tic Tac Toe Game</h1>
+      <button onClick={resetGame}>Reiniciar</button>
       <section className="game">
         {
           board.map((_, index) => {
@@ -110,6 +111,30 @@ function App() {
           {TURNS.O}
         </Square>
       </section>
+
+      {
+        winner !== null && (
+          <section className='winner'>
+            <div className="text">
+              <h2>
+                {
+                  winner === false
+                    ? 'Empate'
+                    : 'Ganó:' 
+                }
+              </h2>
+
+              <header className='win'>
+                {winner && <Square>{winner}</Square>}
+              </header>
+
+              <footer>
+                <button onClick={resetGame}>Empezar de nuevo</button>
+              </footer>
+            </div>
+          </section>
+        )
+      }
     </main>
   )
 }
