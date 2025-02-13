@@ -97,3 +97,27 @@ ESTO ES PORQUE EN REACT CAMBIAR EL ESTADO DIRECTAMENTE CAUSA PROBLEMAS DE RE END
 
 Los datos del nuevo re enderizado deben ser nuevos. Si se ha modificado un elemento nuevo, objeto, array, etc. Sino ha cambiado puede ser el mismo.
 ---------------------------------------------------------------------------------------------------------------------------------------------
+Dividir en componentes y constantes, después de ya tener funcional nuestra app.
+
+Componetizar.
+
+Hacerlo cuando ya tengamos algo funcionando y avanzado. No detenerse por ello desde el principio.
+
+--------------------------
+Buenas prácticas
+
+if (winner === null) return null
+    // winner !== null && (
+
+Para anidar menos código
+Dejar lo más limpio posible el renderizado
+También facilita ver lo que se re enderiza y lo que se necesita, ejemplo variables.
+
+------------------------
+
+Importar de forma nombrada cuando no son default functions
+
+------------------------
+
+React es componetizar
+Repetir constantemente y ver las oportunidades que podemos ir separando.
