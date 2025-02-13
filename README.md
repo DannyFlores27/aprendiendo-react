@@ -121,3 +121,4 @@ Importar de forma nombrada cuando no son default functions
 
 React es componetizar
 Repetir constantemente y ver las oportunidades que podemos ir separando.
+TODO LO QUE PUEDE SER REUTILIZABLE, CON REACT SE PUEDE COMPONETIZAR. NO METER TODO EN UN COMPONENTE Y YA.
