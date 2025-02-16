@@ -6,15 +6,24 @@ import { Square } from './components/Square.jsx'
 import { TURNS } from './constants.js'
 import { checkWinnerFrom, checkEndGame } from './logic/board.js'
 import { WinnerModal } from './components/WinnerModal.jsx'
+import { saveGameToStorage, resetGameStorage } from './logic/storage/index.js'
 
 function App() {
   /* const board = Array(9).fill(null) */
-  const [board, setBoard] = useState(Array(9).fill(null))
+  const [board, setBoard] = useState(() => {
+    const boardFromStorage = window.localStorage.getItem('board')
+    return boardFromStorage ? JSON.parse(boardFromStorage) : Array(9).fill(null)
+  })
   /* const [board, setBoard] = useState(
     ['x', 'o', 'x', 'o', 'x', 'o', 'x', 'o', 'x']
   ) */
 
-  const [turn, setTurn] = useState(TURNS.X)
+  const [turn, setTurn] = useState(() => {
+    const turnFromStorage = window.localStorage.getItem('turn')
+    // Si no hay nada en el storage, se usa el valor por defecto
+    // ?? es el operador de fusión de nulos ya que turn puede ser null y ya es String no necesita ser convertido
+    return turnFromStorage ?? TURNS.X
+  })
 
   // Null es que no hay ganador, false es que hay empate
   const [winner, setWinner] = useState(null)
@@ -23,6 +32,8 @@ function App() {
     setBoard(Array(9).fill(null))
     setTurn(TURNS.X)
     setWinner(null)
+
+    resetGameStorage()
   }
 
   const updateBoard = (index) => {
@@ -38,6 +49,11 @@ function App() {
     // Cambiar de turno
     const newTurn = turn === TURNS.X ? TURNS.O : TURNS.X
     setTurn(newTurn)
+    // Guardar en el storage
+    saveGameToStorage({
+      board: newBoard,
+      turns: newTurn
+    })
     // Verificar si hay un ganador
     const newWinner = checkWinnerFrom(newBoard)
     if (newWinner) {
