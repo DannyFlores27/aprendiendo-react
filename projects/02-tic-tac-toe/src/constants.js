@@ -1,7 +1,8 @@
+// Enum y constante, potencia de cambio en un solo lugar
 export const TURNS = {
-    X: 'x',
-    O: 'o'
-  }
+    X: '❌',
+    O: '⚪'
+}
 
 export  const WINNER_COMBOS = [
     [0, 1, 2],
@@ -12,4 +13,4 @@ export  const WINNER_COMBOS = [
     [2, 5, 8],
     [0, 4, 8],
     [2, 4, 6]
-  ]
+]
