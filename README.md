@@ -63,6 +63,8 @@ Se asigna un estado incial, useState devuelve un array de 2 posiciones: 1 valor 
 
 Del padre al hijo podemos pasar funciones, mientras que del hijo al padre no. Pero si lo podemos llegar hacer con CALLBACK.
 
+Callback dentro del useState es una función que tiene que devolver un valor con el que se desea incializar el estado.
+
 Estado Inicial solo se inicializa una vez, por lo cual si el estado de un componente padre que es enviado como Prop para inicializar el estado de un componente hijo, no influye más de 1 vez en el hijo porque el estado inicial solo ocurre una vez, cuando inicia el app y no cuando se vuelve a re enderizar.
 
 No esperar que un componente hijo se vuelva a reenderizar por el cambio del estado de un componente padre, cuando el estado del padre es enviado como prop estadoInicial al hijo, esto solo ocurre 1 vez cuando inicia el app.
@@ -132,3 +134,31 @@ export const TURNS = {
     X: 'a',
     O: 'b'
 }
+
+---------------------------
+
+Local Storage
+2 variables: 1 nombreDeLoQueGuardoUnObjetoEjemplo, 2 string conElValorDelObjeto.
+
+Esto es para que luego lo recuperemos y lo podamos volver a usar.
+
+Remover especificamente del localStorage
+window.localStorage.removeItem('board')
+Buena práctica no borrar todo sino es necesario.
+
+Leer del localEstorage es LENTO, SINCRONO Y BLOQUEA. Evitar que en cada render vuelva a leer local storage, sino lo necesita.
+
+Esto es localStorage del lado del cliente, falta manejarlos en conjunto con DB.
+
+Todos los Hooks no pueden estar dentro de un if: UseState, useEffect, etc.
+
+Porque React guarda la posición, en un array interno en memoria, la posición de cada Hook. Por lo cual con un if se perdería las posiciones correctas, ya que el if no siempre se ejecutaria su interior.
+
+HOOK´S SIEMPRE DEBEN ESTAR EN EL CUERPO DEL COMPONENTE, NUNCA DENTRO DE CONDICIONALES, BUCLES, DE NADA QUE IMPIDA ACCEDER A SU POSICIÓN.
+
+|| mira si esto es False
+?? mira si esto es Null o Undefine.
+
+Alert bloquea la ejecución del código, no es recomendable usar. Solo para pruebas.
+
+-----------------------------------------------
