@@ -122,3 +122,13 @@ Importar de forma nombrada cuando no son default functions
 React es componetizar
 Repetir constantemente y ver las oportunidades que podemos ir separando.
 TODO LO QUE PUEDE SER REUTILIZABLE, CON REACT SE PUEDE COMPONETIZAR. NO METER TODO EN UN COMPONENTE Y YA.
+
+--------------------------
+
+Componetizar y tratar de dejar JS por aparte y así poder reutilizar en otros frameworks. Porque es JS.
+
+Enum y constante, potencia de cambio en un solo lugar
+export const TURNS = {
+    X: 'a',
+    O: 'b'
+}
